@@ -5,4 +5,4 @@
 
 cd $PBS_O_WORKDIR
 
-./src/mycc B7_02_1_1_DAPI_001.png
+./src/dnlm B7_02_1_1_DAPI_001.png
