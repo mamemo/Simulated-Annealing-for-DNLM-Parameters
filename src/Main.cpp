@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
     //time end
 
     //Write image to output file.
-    imwrite(outputFile, F1);
+    imwrite(outputFile, newImage);
     double elapsed_secs =  ((double) (end - begin)) / CLOCKS_PER_SEC;
     cout << "Time to process an image: "  << elapsed_secs << endl;
     return 0;
