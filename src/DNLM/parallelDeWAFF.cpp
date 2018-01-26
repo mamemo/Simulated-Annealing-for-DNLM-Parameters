@@ -18,7 +18,6 @@ Mat ParallelDeWAFF::filter(const Mat& U){
 
     F1 = processImage(U);
     return F1;
-    }
 }
 
 NoAdaptiveLaplacian* ParallelDeWAFF::getNAL(){
