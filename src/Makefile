@@ -14,7 +14,7 @@ LIBS = `pkg-config --libs opencv` -lopencv_highgui
 LDFLAGS = -g3 -Wall
 # define any directories containing header files other than /usr/include
 #
-INCLUDES= -I../include -I../include/DNLM -I/usr/local/include/opencv -I/usr/local/include/opencv2
+INCLUDES= -I../include -I../include/DNLM -I/usr/include/opencv -I/usr/include/opencv2
 
 # define the C source files
 SRCS = DNLM/bfilterDeceived.cpp DNLM/nlmfilterDeceived.cpp  DNLM/noAdaptiveLaplacian.cpp  DNLM/parallelDeWAFF.cpp  DNLM/tools.cpp Main.cpp
@@ -30,7 +30,7 @@ SRCS = DNLM/bfilterDeceived.cpp DNLM/nlmfilterDeceived.cpp  DNLM/noAdaptiveLapla
 OBJS = $(SRCS:.c=.o)
 
 # define the executable file
-MAIN = mycc
+MAIN = dnlm
 
 #
 # The following part of the makefile is generic; it can be used to
