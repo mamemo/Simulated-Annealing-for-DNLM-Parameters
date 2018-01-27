@@ -5,7 +5,7 @@
  *      Authors: mamendez
  */
 #include "parallelDeWAFF.hpp"
-#include "Thresholder.hpp"
+//#include "Thresholder.hpp"
 #include <ctime>
 
 int main(int argc, char* argv[]){
@@ -45,8 +45,8 @@ int main(int argc, char* argv[]){
 
     //time start
     clock_t begin = clock();
-    //Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
-    Mat newImage = Thresholder::applyOtsu(U);
+    Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
+    //Mat newImage = Thresholder::applyOtsu(U);
     clock_t end = clock();
     //time end
 

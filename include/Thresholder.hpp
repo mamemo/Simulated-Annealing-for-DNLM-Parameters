@@ -8,13 +8,12 @@
 #ifndef THRESHOLDER_HPP_
 #define THRESHOLDER_HPP_
 
+using namespace cv;
 using namespace std;
 
 class Thresholder{
 public:
 	static Mat applyOtsu(const Mat& U);
 
-private:
-	Mat thresholded;
 };
 #endif /* THRESHOLDER_HPP_ */

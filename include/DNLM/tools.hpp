@@ -9,7 +9,6 @@
 #define TOOLS_HPP_
 
 #include <algorithm>
-#include <string>
 #include "opencv2/core/core.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "highgui/highgui.hpp"
