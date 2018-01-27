@@ -1,11 +1,10 @@
 /*
- * main.cpp
+ * parallelDeWAFF.cpp
  *
  *  Modified on: Nov 07, 2016
  *      Authors: manzumbado, davidp
  */
 #include "parallelDeWAFF.hpp"
-#include <ctime>
 using namespace std;
 
 
@@ -16,7 +15,7 @@ Mat ParallelDeWAFF::filter(const Mat& U, int wSize, int sigma_r, int lambda){
     nAL->setMask(-h);
 
     //Set parameters for processing
-    int wSize_n=4;//1;
+    int wSize_n=3;
     double sigma_s = wRSize/1.5;
 
     Mat fDeceivedNLM = filterDeceivedNLM(U, wRSize, wSize_n, sigma_s, sigma_r, lambda);

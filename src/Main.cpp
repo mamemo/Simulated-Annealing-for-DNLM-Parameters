@@ -5,6 +5,7 @@
  *      Authors: mamendez
  */
 #include "parallelDeWAFF.hpp"
+#include "Thresholder.hpp"
 #include <ctime>
 using namespace std;
 
@@ -30,10 +31,10 @@ int main(int argc, char* argv[]){
     string::size_type pAt = inputFile.find_last_of('.');
 
     // Form the new name with container
-    const string outputFile = inputFile.substr(0, pAt) + "_DeNLM.jpg";
+    const string outputFile = inputFile.substr(0, pAt) + "_OTSU.png";
 
     Mat U;
-    U = imread(inputFile, CV_LOAD_IMAGE_COLOR);
+    U = imread(inputFile, CV_LOAD_IMAGE_GRAYSCALE);
     //Read one frame from input video
     if(!U.data){
       cout << "Could not read image from file." << endl;
@@ -46,7 +47,8 @@ int main(int argc, char* argv[]){
 
     //time start
     clock_t begin = clock();
-    Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
+    //Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
+    Mat newImage = Thresholder::applyOtsu(U);
     clock_t end = clock();
     //time end
 
