@@ -16,14 +16,13 @@ using namespace std;
 
 class ParallelDeWAFF{
 public:
-	Mat filter(const Mat& U);
+	Mat filter(const Mat& U, int wSize, int sigma_r, int lambda);
 	NoAdaptiveLaplacian* getNAL();
 
 private:
 	NoAdaptiveLaplacian nal;
 	BFilterDeceived bfd;
 	NLMFilterDeceived nlmfd;
-	Mat processImage(const Mat& U);
 	Mat filterDeceivedNLM(const Mat& U, int wSize, int wSize_n, double sigma_s, int sigma_r, int lambda);
 };
 #endif /* PARALLELDEWAFF_HPP_ */

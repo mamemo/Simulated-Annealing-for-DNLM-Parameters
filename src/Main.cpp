@@ -40,9 +40,13 @@ int main(int argc, char* argv[]){
       return -1;
     }
 
+    int wRSize = 4;//21;
+    int sigma_r = 310;//3; //13
+    int lambda = 3;//1.7;
+
     //time start
     clock_t begin = clock();
-    Mat newImage = dnlm.filter(U);
+    Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
     clock_t end = clock();
     //time end
 

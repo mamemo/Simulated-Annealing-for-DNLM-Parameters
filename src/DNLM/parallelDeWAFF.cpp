@@ -9,33 +9,23 @@
 using namespace std;
 
 
-Mat ParallelDeWAFF::filter(const Mat& U){
+Mat ParallelDeWAFF::filter(const Mat& U, int wSize, int sigma_r, int lambda){
     //Create the Laplacian of Gaussian mask once
     NoAdaptiveLaplacian* nAL = getNAL();
     Mat h =  Tools::fspecialLoG(17, 0.005);
     nAL->setMask(-h);
-    Mat F1;
 
-    F1 = processImage(U);
-    return F1;
-}
-
-NoAdaptiveLaplacian* ParallelDeWAFF::getNAL(){
-    return &(this->nal);
-}
-
-//used parameters for the paper CONCAPAN 2016
-Mat ParallelDeWAFF::processImage(const Mat& U){
     //Set parameters for processing
-    int wRSize = 21;
-    int wSize_n=1;
+    int wSize_n=4;//1;
     double sigma_s = wRSize/1.5;
-    int sigma_r = 3; //13
-    int lambda = 1.7;
 
     Mat fDeceivedNLM = filterDeceivedNLM(U, wRSize, wSize_n, sigma_s, sigma_r, lambda);
 
     return fDeceivedNLM;
+}
+
+NoAdaptiveLaplacian* ParallelDeWAFF::getNAL(){
+    return &(this->nal);
 }
 
 //Input image must be from 0 to 255
