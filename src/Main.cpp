@@ -7,8 +7,6 @@
 #include "parallelDeWAFF.hpp"
 #include "Thresholder.hpp"
 #include <ctime>
-using namespace std;
-
 
 int main(int argc, char* argv[]){
     ParallelDeWAFF dnlm;

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class ParallelDeWAFF{
+class Thresholder{
 public:
 	static Mat applyOtsu(const Mat& U);
 
