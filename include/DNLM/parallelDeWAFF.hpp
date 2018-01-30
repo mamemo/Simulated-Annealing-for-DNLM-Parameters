@@ -21,7 +21,6 @@ public:
 
 private:
 	NoAdaptiveLaplacian nal;
-	BFilterDeceived bfd;
 	NLMFilterDeceived nlmfd;
 	Mat filterDeceivedNLM(const Mat& U, int wSize, int wSize_n, double sigma_s, int sigma_r, int lambda);
 };

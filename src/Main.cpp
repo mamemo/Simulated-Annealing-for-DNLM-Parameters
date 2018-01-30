@@ -4,9 +4,7 @@
  *  Modified on: Jan 30, 2018
  *      Authors: mamendez
  */
-#include "parallelDeWAFF.hpp"
-#include <ctime>
-using namespace std;
+#include "Main.hpp"
 
 
 int main(int argc, char* argv[]){
