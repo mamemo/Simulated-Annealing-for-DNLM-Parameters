@@ -1,5 +1,5 @@
 /*
- * main.cpp
+ * parallelDeWAFF.cpp
  *
  *  Modified on: Nov 07, 2016
  *      Authors: manzumbado, davidp

@@ -17,7 +17,7 @@ LDFLAGS = -g3 -Wall
 INCLUDES= -I../include -I../include/DNLM -I/usr/include/opencv -I/usr/include/opencv2
 
 # define the C source files
-SRCS = DNLM/nlmfilterDeceived.cpp  DNLM/noAdaptiveLaplacian.cpp  DNLM/parallelDeWAFF.cpp  DNLM/tools.cpp Main.cpp
+SRCS = DNLM/nlmfilterDeceived.cpp  DNLM/noAdaptiveLaplacian.cpp  DNLM/parallelDeWAFF.cpp  DNLM/tools.cpp Segmentacion/Thresholder.cpp Main.cpp
 
 # define the C object files
 #
