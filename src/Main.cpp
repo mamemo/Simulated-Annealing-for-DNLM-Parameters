@@ -1,7 +1,7 @@
 /*
  * Main.cpp
  *
- *  Modified on: Nov 07, 2016
+ *  Modified on: Jan 30, 2018
  *      Authors: mamendez
  */
 #include "parallelDeWAFF.hpp"

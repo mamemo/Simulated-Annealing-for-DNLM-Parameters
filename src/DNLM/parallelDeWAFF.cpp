@@ -9,7 +9,7 @@
 using namespace std;
 
 
-Mat ParallelDeWAFF::filter(const Mat& U, int wSize, int sigma_r, int lambda){
+Mat ParallelDeWAFF::filter(const Mat& U, int wRSize, int sigma_r, int lambda){
     //Create the Laplacian of Gaussian mask once
     NoAdaptiveLaplacian* nAL = getNAL();
     Mat h =  Tools::fspecialLoG(17, 0.005);
