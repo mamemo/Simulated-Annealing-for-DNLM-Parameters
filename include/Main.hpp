@@ -8,7 +8,7 @@
 #ifndef MAIN_HPP_
 #define MAIN_HPP_
 
-#include "parallelDeWAFF.hpp"
+//#include "parallelDeWAFF.hpp"
 #include "Thresholder.hpp"
 #include <ctime>
 using namespace std;

@@ -8,13 +8,15 @@
 #ifndef THRESHOLDER_HPP_
 #define THRESHOLDER_HPP_
 
-#include <iostream>
-#include <string>
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "highgui/highgui.hpp"
+using namespace cv;
 using namespace std;
 
 class Thresholder{
 public:
-	void mensaje();
+	Mat applyOtsu(const Mat& U);
 
 };
 #endif /* THRESHOLDER_HPP_ */
