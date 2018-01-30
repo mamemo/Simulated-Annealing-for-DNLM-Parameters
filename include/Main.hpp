@@ -9,6 +9,8 @@
 #define MAIN_HPP_
 
 //#include "parallelDeWAFF.hpp"
+#include <iostream>
+#include <string>
 #include "Thresholder.hpp"
 #include <ctime>
 using namespace std;

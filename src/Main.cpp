@@ -7,7 +7,7 @@
 #include "Main.hpp"
 
 int main(int argc, char* argv[]){
-    ParallelDeWAFF dnlm;
+    //ParallelDeWAFF dnlm;
 
     //Check input arguments
     if (argc != 2){
