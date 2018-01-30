@@ -9,7 +9,6 @@
 #define PARALLELDEWAFF_HPP_
 
 #include <string>
-#include "bfilterDeceived.hpp"
 #include "nlmfilterDeceived.hpp"
 #include "noAdaptiveLaplacian.hpp"
 using namespace std;
