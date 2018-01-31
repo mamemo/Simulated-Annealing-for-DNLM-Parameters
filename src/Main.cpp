@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
     const string outputFile = inputFile.substr(0, pAt) + "_Otsu.png";
 
     Mat U;
-    U = imread(inputFile, CV_LOAD_IMAGE_COLOR);
+    U = imread(inputFile, CV_LOAD_IMAGE_GRAYSCALE);
     //Read one frame from input video
     if(!U.data){
       cout << "Could not read image from file." << endl;

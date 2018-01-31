@@ -8,10 +8,11 @@
 #ifndef MAIN_HPP_
 #define MAIN_HPP_
 
-//#include "parallelDeWAFF.hpp"
-#include <iostream>
-#include <string>
+#include "parallelDeWAFF.hpp"
+//#include <iostream>
+//#include <string>
 #include "Thresholder.hpp"
+#include "Dice.hpp"
 #include <ctime>
 using namespace std;
 
