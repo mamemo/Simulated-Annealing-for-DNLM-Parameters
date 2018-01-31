@@ -17,9 +17,7 @@
 
    for (int x =0; x < sizeX; x++){
      for (int y = 0; y < sizeY; y++) {
-       double[] pixelU = umbralized.get(y, x);
-       double[] pixelG = groundtruth.get(y, x);
-       if (pixelU[0] == pixelG[0]){
+       if (umbralized.at<double>(y, x) == groundtruth.at<double>(y, x)){
          intersection++;
        }
      }
