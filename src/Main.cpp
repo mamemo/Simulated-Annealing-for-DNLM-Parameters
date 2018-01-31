@@ -27,10 +27,10 @@ int main(int argc, char* argv[]){
     string::size_type pAt = inputFile.find_last_of('.');
 
     // Form the new name with container
-    const string outputFile = inputFile.substr(0, pAt) + "_Otsu.png";
+    const string outputFile = inputFile.substr(0, pAt) + "_DNLM.png";
 
     Mat U;
-    U = imread(inputFile, CV_LOAD_IMAGE_GRAYSCALE);
+    U = imread(inputFile, CV_LOAD_IMAGE_COLOR);
     //Read one frame from input video
     if(!U.data){
       cout << "Could not read image from file." << endl;

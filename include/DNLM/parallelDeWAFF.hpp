@@ -11,6 +11,7 @@
 #include <string>
 #include "nlmfilterDeceived.hpp"
 #include "noAdaptiveLaplacian.hpp"
+#include <ctime>
 using namespace std;
 
 class ParallelDeWAFF{

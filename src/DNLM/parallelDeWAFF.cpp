@@ -5,9 +5,6 @@
  *      Authors: manzumbado, davidp
  */
 #include "parallelDeWAFF.hpp"
-#include <ctime>
-using namespace std;
-
 
 Mat ParallelDeWAFF::filter(const Mat& U, int wRSize, int sigma_r, int lambda){
     //Create the Laplacian of Gaussian mask once

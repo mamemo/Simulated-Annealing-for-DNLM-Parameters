@@ -11,8 +11,8 @@
 #include "parallelDeWAFF.hpp"
 //#include <iostream>
 //#include <string>
-#include "Thresholder.hpp"
-#include "Dice.hpp"
+//#include "Thresholder.hpp"
+//#include "Dice.hpp"
 #include <ctime>
 using namespace std;
 
