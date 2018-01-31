@@ -5,8 +5,8 @@
  *      Author: mamendez
  */
 
-#ifndef THRESHOLDER_HPP_
-#define THRESHOLDER_HPP_
+#ifndef DICE_HPP_
+#define DICE_HPP_
 
 #include "opencv2/core/core.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
@@ -14,10 +14,8 @@
 using namespace cv;
 using namespace std;
 
-class Thresholder{
+class Dice{
 public:
-	Mat applyOtsu(const Mat& U);
-  Mat applyThreshold(const Mat& U, int t);
-  Mat applyInverseThreshold(const Mat& U, int t);
+	static Mat calculateDice(const Mat& umbralized, const Mat& groundtruth);
 };
-#endif /* THRESHOLDER_HPP_ */
+#endif /* DICE_HPP_ */

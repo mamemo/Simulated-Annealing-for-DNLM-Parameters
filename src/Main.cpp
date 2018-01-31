@@ -7,7 +7,7 @@
 #include "Main.hpp"
 
 int main(int argc, char* argv[]){
-    //ParallelDeWAFF dnlm;
+    ParallelDeWAFF dnlm;
 
     //Check input arguments
     if (argc != 2){
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
     string::size_type pAt = inputFile.find_last_of('.');
 
     // Form the new name with container
-    const string outputFile = inputFile.substr(0, pAt) + "_Otsu.jpg";
+    const string outputFile = inputFile.substr(0, pAt) + "_Otsu.png";
 
     Mat U;
     U = imread(inputFile, CV_LOAD_IMAGE_COLOR);
@@ -37,15 +37,15 @@ int main(int argc, char* argv[]){
       return -1;
     }
 
-    int wRSize = 4;//21;
+    int wRSize = 5;//21;
     int sigma_r = 310;//3; //13
     int lambda = 3;//1.7;
 
     //time start
     clock_t begin = clock();
-    //Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
-    Thresholder t;
-    Mat newImage = t.applyOtsu(U);
+    Mat newImage = dnlm.filter(U, wRSize, sigma_r, lambda);
+    //Thresholder t;
+    //Mat newImage = t.applyOtsu(U);
     clock_t end = clock();
     //time end
 
