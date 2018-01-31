@@ -16,6 +16,6 @@ using namespace std;
 
 class Dice{
 public:
-	static Mat calculateDice(const Mat& umbralized, const Mat& groundtruth);
+	static double calculateDice(const Mat& umbralized, const Mat& groundtruth);
 };
 #endif /* DICE_HPP_ */

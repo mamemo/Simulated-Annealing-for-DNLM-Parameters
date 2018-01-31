@@ -6,10 +6,10 @@
  */
  #include "Dice.hpp"
 
- Mat Dice::calculateDice(const Mat& umbralized, const Mat& groundtruth){
+ double Dice::calculateDice(const Mat& umbralized, const Mat& groundtruth){
    float intersection = 0.0;
-   int cardinalityU = umbralized.rows() * umbralized.cols();
-   int cardinalityG = groundtruth.rows() * groundtruth.cols();
+   int cardinalityU = umbralized.rows * umbralized.cols;
+   int cardinalityG = groundtruth.rows * groundtruth.cols;
 
    Size sizeGroundTruth = groundtruth.size();
    int sizeX = (int) sizeGroundTruth.width;
